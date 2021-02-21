@@ -11,8 +11,8 @@ def test_1():
         #open browser
         obj_lib = LIB()
         browser = obj_lib.open_browser()
-        #email_address = obj_lib.config_data(['eMail'])
-        #password = obj_lib.config_data(['password'])
+        email_address = obj_lib.config_data['eMail']
+        password = obj_lib.config_data['password']
 
         #navigate to url
         obj_lib.page_load(browser)
@@ -28,8 +28,8 @@ def test_1():
 
         #submit wit email and pass
         obj_lib.wait_for_element(browser, obj_signin.email_address)
-        browser.find_element(*obj_signin.email_address).send_keys('aniavetisyan1997@gmail.com')
-        browser.find_element(*obj_signin.password).send_keys('test112233')
+        browser.find_element(*obj_signin.email_address).send_keys(email_address)
+        browser.find_element(*obj_signin.password).send_keys(password)
 
         #click on Sign in button
         browser.find_element(*obj_signin.sign_in_btn).click()
