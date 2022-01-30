@@ -48,4 +48,4 @@ def test_1():
         #close browser
         obj_lib.close_browser(browser)
 
-# test_1()
+test_1()

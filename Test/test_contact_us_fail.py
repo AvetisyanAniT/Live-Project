@@ -44,4 +44,4 @@ def test_3():
         #close browser
         obj_lib.close_browser(browser)
 
-# test_3()
+test_3()
